@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/background"
+    android:background="@drawable/partly_cloudy_night"
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="35dip"
+    >
+
+	<ImageView
+		android:id="@+id/widget_hour1"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:paddingLeft="60dip"
+		/>
+	<ImageView
+		android:id="@+id/widget_hour2"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/widget_hour1"
+		/>
+	<ImageView
+		android:id="@+id/widget_min1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/widget_hour2"
+		android:paddingLeft="55dip"
+		/>
+	<ImageView
+		android:id="@+id/widget_min2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_toRightOf="@id/widget_min1"
+		/>
+	<TextView
+		android:id="@+id/widget_date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:paddingLeft="30dip"
+		android:textColor="#FFFFFF"
+		android:paddingTop="100dip"
+		/>
+</RelativeLayout>
