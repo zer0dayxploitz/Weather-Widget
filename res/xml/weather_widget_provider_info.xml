@@ -2,7 +2,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="294dip"
 	android:minHeight="146dip"
-	android:updatePeriodMillis="1800000"
+	android:updatePeriodMillis="0"
 	android:initialLayout="@layout/weatherwidget_layout"
 	android:configure="com.zer0day.weather.widget.WeatherWidgetConfig"
 />

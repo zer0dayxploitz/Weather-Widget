@@ -69,6 +69,8 @@ private Button.OnClickListener configOkButtonOnClickListener = new Button.OnClic
 			calendar.add(Calendar.SECOND, 10);
 			alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 20*1000, pendingIntent);
 			
+			WeatherWidgetProvider.SaveAlarmManager(alarmManager, pendingIntent);
+			
 			Intent resultValue = new Intent();
 			resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, mAppWidgetId);
 			setResult(RESULT_OK, resultValue);

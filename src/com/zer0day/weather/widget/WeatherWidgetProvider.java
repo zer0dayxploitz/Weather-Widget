@@ -3,6 +3,8 @@ package com.zer0day.weather.widget;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
@@ -34,13 +36,23 @@ public class WeatherWidgetProvider extends AppWidgetProvider {
 		Toast.makeText(context, "onDeleted()", Toast.LENGTH_LONG).show();
 	}
 
+	static AlarmManager myAlarmManager;
+	static PendingIntent myPendingIntent;
+	
 	@Override
 	public void onDisabled(Context context) {
 		// TODO Auto-generated method stub
 		//super.onDisabled(context);
+		myAlarmManager.cancel(myPendingIntent);
 		Toast.makeText(context, "onDisabled()", Toast.LENGTH_LONG).show();
 	}
 
+	static void SaveAlarmManager(AlarmManager tAlarmManager, PendingIntent tPendingIntent)
+	{
+	 myAlarmManager = tAlarmManager;
+	 myPendingIntent = tPendingIntent;
+	}
+	
 	@Override
 	public void onEnabled(Context context) {
 		// TODO Auto-generated method stub
