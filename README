@@ -1,0 +1,5 @@
+This project creates a weather widget for Android (>= 2.2) that is similar
+to the widget by MIUI.  It uses the same images, but has far less features.
+The only purpose this project serves is for me to learn about widgets in
+Android.  If you would like the full version of the MIUI widget
+(far better than mine) visit: http://www.miui-dev.com/miui-weather/
