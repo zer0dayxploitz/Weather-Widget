@@ -1,7 +1,5 @@
 package com.zer0day.weather.widget;
 
-import java.util.Calendar;
-
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -60,14 +58,17 @@ private Button.OnClickListener configOkButtonOnClickListener = new Button.OnClic
 			
 			Toast.makeText(context, "HelloWidgetConfig.onClick(): " + String.valueOf(mAppWidgetId) , Toast.LENGTH_LONG).show();
 			
-			//prepare Alarm Service to trigger Widget
+			
+		    // First alarm to go off when the RTC minute changes 
+		    long firstTime = System.currentTimeMillis(); 
+		    firstTime += (60000 - firstTime % 60000);
+		    
+		  //prepare Alarm Service to trigger Widget
 			Intent intent = new Intent(WeatherWidgetProvider.MY_WIDGET_UPDATE);
 			PendingIntent pendingIntent = PendingIntent.getBroadcast(WeatherWidgetConfig.this, 0, intent, 0);
 			AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-			Calendar calendar = Calendar.getInstance();
-			calendar.setTimeInMillis(System.currentTimeMillis());
-			calendar.add(Calendar.SECOND, 10);
-			alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 20*1000, pendingIntent);
+			// Update widgets on every minute update.
+			alarmManager.setRepeating(AlarmManager.RTC, firstTime, 60000, pendingIntent);
 			
 			WeatherWidgetProvider.SaveAlarmManager(alarmManager, pendingIntent);
 			
