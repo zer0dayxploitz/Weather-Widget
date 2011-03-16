@@ -26,8 +26,8 @@ public final class R {
         public static final int partly_cloudy_night=0x7f02000c;
     }
     public static final class id {
-        public static final int background=0x7f060000;
-        public static final int okconfig=0x7f060001;
+        public static final int background=0x7f060001;
+        public static final int saveconfig=0x7f060000;
         public static final int widget_date=0x7f060006;
         public static final int widget_hour1=0x7f060002;
         public static final int widget_hour2=0x7f060003;
@@ -40,7 +40,7 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int start=0x7f050002;
+        public static final int save_changes=0x7f050002;
         public static final int widget_text=0x7f050001;
     }
     public static final class xml {
