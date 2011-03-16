@@ -7,8 +7,10 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.RemoteViews;
 import android.widget.Toast;
 
@@ -25,6 +27,16 @@ public class WeatherWidgetProvider extends AppWidgetProvider {
 		super.onReceive(context, intent);
 	  
 		if(MY_WIDGET_UPDATE.equals(intent.getAction())){
+			
+			Bundle extras = intent.getExtras();
+			if(extras!=null) {
+				AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
+				ComponentName thisAppWidget = new ComponentName(context.getPackageName(), WeatherWidgetProvider.class.getName());
+                int[] appWidgetIds = appWidgetManager.getAppWidgetIds(thisAppWidget);
+
+				onUpdate(context, appWidgetManager, appWidgetIds);
+			}
+			
 			Toast.makeText(context, "onReceiver()", Toast.LENGTH_LONG).show();
 		}
 	}
