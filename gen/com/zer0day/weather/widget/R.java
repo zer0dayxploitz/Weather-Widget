@@ -11,29 +11,45 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int font1_0=0x7f020000;
-        public static final int font1_1=0x7f020001;
-        public static final int font1_2=0x7f020002;
-        public static final int font1_3=0x7f020003;
-        public static final int font1_4=0x7f020004;
-        public static final int font1_5=0x7f020005;
-        public static final int font1_6=0x7f020006;
-        public static final int font1_7=0x7f020007;
-        public static final int font1_8=0x7f020008;
-        public static final int font1_9=0x7f020009;
-        public static final int icon=0x7f02000a;
-        public static final int partly_cloudy=0x7f02000b;
-        public static final int partly_cloudy_night=0x7f02000c;
+        public static final int app_main_bg=0x7f020000;
+        public static final int app_main_bottombar=0x7f020001;
+        public static final int app_main_bottombar_bg=0x7f020002;
+        public static final int btn_arrow_down=0x7f020003;
+        public static final int btn_arrow_up=0x7f020004;
+        public static final int font1_0=0x7f020005;
+        public static final int font1_1=0x7f020006;
+        public static final int font1_2=0x7f020007;
+        public static final int font1_3=0x7f020008;
+        public static final int font1_4=0x7f020009;
+        public static final int font1_5=0x7f02000a;
+        public static final int font1_6=0x7f02000b;
+        public static final int font1_7=0x7f02000c;
+        public static final int font1_8=0x7f02000d;
+        public static final int font1_9=0x7f02000e;
+        public static final int i_bottom_arrow_down=0x7f02000f;
+        public static final int i_bottom_arrow_up=0x7f020010;
+        public static final int i_edit_1=0x7f020011;
+        public static final int i_fresh_1=0x7f020012;
+        public static final int icon=0x7f020013;
+        public static final int line_bg_105=0x7f020014;
+        public static final int moon=0x7f020015;
+        public static final int partly_cloudy=0x7f020016;
+        public static final int partly_cloudy_night=0x7f020017;
     }
     public static final class id {
-        public static final int background=0x7f060001;
-        public static final int saveconfig=0x7f060000;
-        public static final int wall=0x7f060002;
-        public static final int widget_date=0x7f060007;
-        public static final int widget_hour1=0x7f060003;
-        public static final int widget_hour2=0x7f060004;
-        public static final int widget_min1=0x7f060005;
-        public static final int widget_min2=0x7f060006;
+        public static final int background=0x7f060006;
+        public static final int city=0x7f060000;
+        public static final int edit_button=0x7f060001;
+        public static final int i_bottom_bg=0x7f060003;
+        public static final int i_weatherImage=0x7f060002;
+        public static final int last_updated=0x7f060004;
+        public static final int refresh=0x7f060005;
+        public static final int wall=0x7f060007;
+        public static final int widget_date=0x7f06000c;
+        public static final int widget_hour1=0x7f060008;
+        public static final int widget_hour2=0x7f060009;
+        public static final int widget_min1=0x7f06000a;
+        public static final int widget_min2=0x7f06000b;
     }
     public static final class layout {
         public static final int config=0x7f030000;
@@ -41,7 +57,8 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int save_changes=0x7f050002;
+        public static final int city=0x7f050003;
+        public static final int last_updated=0x7f050002;
         public static final int widget_text=0x7f050001;
     }
     public static final class xml {

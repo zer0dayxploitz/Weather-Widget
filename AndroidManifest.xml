@@ -17,8 +17,8 @@
 				android:resource="@xml/weather_widget_provider_info" />
         </receiver>
         
-		<activity android:name=".WeatherWidgetConfig"
-           android:label="Weather Widget Config">
+		<activity android:name=".WeatherWidgetCurrent"
+           android:label="Current Weather">
      		<intent-filter>
         		 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
      		</intent-filter>

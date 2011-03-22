@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class WeatherWidgetConfig extends Activity {
+public class WeatherWidgetCurrent extends Activity {
 
 	Button configOkButton;
 	int mAppWidgetId = AppWidgetManager.INVALID_APPWIDGET_ID;
@@ -25,7 +25,7 @@ public class WeatherWidgetConfig extends Activity {
 	
 		setContentView(R.layout.config);
 		
-		configOkButton = (Button)findViewById(R.id.saveconfig);
+		configOkButton = (Button)findViewById(R.id.last_updated);
 		configOkButton.setOnClickListener(configOkButtonOnClickListener);
 		
 		Intent intent = getIntent();
@@ -48,7 +48,7 @@ private Button.OnClickListener configOkButtonOnClickListener = new Button.OnClic
 		public void onClick(View arg0) {
 			// TODO Auto-generated method stub
 			
-			final Context context = WeatherWidgetConfig.this;
+			final Context context = WeatherWidgetCurrent.this;
 			
 			AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
 			
@@ -65,7 +65,7 @@ private Button.OnClickListener configOkButtonOnClickListener = new Button.OnClic
 		    
 		  //prepare Alarm Service to trigger Widget
 			Intent intent = new Intent(WeatherWidgetProvider.MY_WIDGET_UPDATE);
-			PendingIntent pendingIntent = PendingIntent.getBroadcast(WeatherWidgetConfig.this, 0, intent, 0);
+			PendingIntent pendingIntent = PendingIntent.getBroadcast(WeatherWidgetCurrent.this, 0, intent, 0);
 			AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
 			// Update widgets on every minute update.
 			alarmManager.setRepeating(AlarmManager.RTC, firstTime, 60000, pendingIntent);

@@ -2,5 +2,6 @@
 <resources>
     <string name="app_name">Weather Widget</string>
     <string name="widget_text">Time here</string>
-    <string name="save_changes">Save</string>
+    <string name="last_updated">Updated: 03/21 18:37</string>
+    <string name="city">Columbia</string>
 </resources>
