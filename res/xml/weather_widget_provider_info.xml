@@ -4,5 +4,5 @@
 	android:minHeight="146dip"
 	android:updatePeriodMillis="0"
 	android:initialLayout="@layout/weatherwidget_layout"
-	android:configure="com.zer0day.weather.widget.WeatherWidgetConfig"
+	android:configure="com.zer0day.weather.widget.WeatherWidgetCurrent"
 />
